@@ -22,13 +22,13 @@ Built with **React.js** on the frontend and **Flask** on the backend, this platf
 
 ## 🖼️ Screenshots  
 ### 🔹 **Homepage**
-![Homepage Screenshot](screenshots/homepage.png)  
+![Homepage Screenshot](https://github.com/SinlessRook/Baymax/blob/main/Screenshots/home.png)
 
-### 🔹 **Emotion Analysis Output**
-![Analysis Screenshot](screenshots/analysis.png)  
+### 🔹 **Emotion Analysis Input**
+![Analysis Screenshot](https://github.com/SinlessRook/Baymax/blob/main/Screenshots/analyse.png)  
 
 ### 🔹 **Detailed Sentiment Breakdown**
-![Sentiment Breakdown Screenshot](screenshots/breakdown.png)  
+![Sentiment Breakdown Screenshot](https://github.com/SinlessRook/Baymax/blob/main/Screenshots/results%20page.png)  
 
 ---
 
