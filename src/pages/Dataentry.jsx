@@ -140,21 +140,12 @@ const DataEntryPage = () => {
             </form>
           ) : (
             <div className="border rounded-lg p-4 h-96 flex flex-col bg-white dark:bg-gray-700">
-              <div className="flex mb-4">
-                <input
-                  type="text"
-                  value={userName}
-                  onChange={(e) => setUserName(e.target.value)}
-                  placeholder="Enter user name..."
-                  className="p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400 text-black dark:text-white bg-gray-100 dark:bg-gray-600 mr-4"
-                />
-                <div className="flex-1 overflow-y-auto">
-                  {chatMessages.map((msg, idx) => (
-                    <div key={idx} className="mb-2">
-                      <strong className="text-black dark:text-white">{msg.sender}:</strong> <span className="text-gray-800 dark:text-gray-200">{msg.text}</span>
-                    </div>
-                  ))}
-                </div>
+              <div className="flex-1 overflow-y-auto mb-4">
+                {chatMessages.map((msg, idx) => (
+                  <div key={idx} className="mb-2">
+                    <strong className="text-black dark:text-white">{msg.sender}:</strong> <span className="text-gray-800 dark:text-gray-200">{msg.text}</span>
+                  </div>
+                ))}
               </div>
               <form onSubmit={handleChatSubmit} className="flex">
                 <input
