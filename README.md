@@ -23,17 +23,15 @@ Built with **React.js** on the frontend and **Flask** on the backend, this platf
 
 ---
 
-## 🖼️ Screenshots
-
+## 🖼️ Screenshots  
 ### 🔹 **Homepage**
-
-
+![Homepage Screenshot](https://github.com/SinlessRook/Baymax/blob/main/Screenshots/home.png)
 
 ### 🔹 **Emotion Analysis Input**
-
-
+![Analysis Screenshot](https://github.com/SinlessRook/Baymax/blob/main/Screenshots/analyse.png)  
 
 ### 🔹 **Detailed Sentiment Breakdown**
+![Sentiment Breakdown Screenshot](https://github.com/SinlessRook/Baymax/blob/main/Screenshots/results%20page.png)  
 
 
 
@@ -77,7 +75,7 @@ Built with **React.js** on the frontend and **Flask** on the backend, this platf
 
 1. **Clone the Backend Repository**:
    ```sh
-   git clone https://github.com/your-username/baymax-backend.git
+   git clone https://github.com/sinless_rook/baymax-backend.git
    cd baymax-backend
    ```
 2. **Create and Activate Virtual Environment**:
