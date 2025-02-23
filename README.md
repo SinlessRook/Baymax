@@ -1,8 +1,49 @@
-# React + Vite
+# 🌿 Mental Health Emotion Analysis
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🧠 About the Project
+In today's digital world, understanding emotions through text can help promote better mental well-being. This project allows users to analyze their emotions simply by **pasting text into our site**—immediately revealing the emotional tone behind their words. 
 
-Currently, two official plugins are available:
+Built with **React.js** on the frontend and **Flask** on the backend, this platform leverages cutting-edge **Natural Language Processing (NLP)** to provide **real-time emotion analysis**, making it easier to reflect on and improve mental health.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 💡 Why This Matters
+- 💙 **Empower Self-Awareness:** Understand emotions behind text messages.
+- 🔍 **Real-Time Emotion Detection:** Get instant feedback on the emotional impact of your words.
+- 🌱 **Mental Health Awareness:** Recognize emotional patterns and seek support if needed.
+- 🖥️ **Seamless Experience:** Built for accuracy, speed, and ease of use.
+
+## 🚀 Key Features
+✅ **Instant Emotion Analysis** – Simply paste any text and get real-time emotional insights.  
+✅ **Deep Sentiment Breakdown** – Categorizes emotions into happiness, sadness, anger, anxiety, etc.  
+✅ **Intuitive & User-Friendly UI** – Clean and engaging interface for seamless interaction.  
+✅ **AI-Powered Analysis** – Leveraging **NLP & Machine Learning** to improve accuracy.  
+✅ **Scalable & Secure** – A robust **Flask backend** ensures data security and performance.  
+
+---
+
+## 🖼️ Screenshots  
+### 🔹 **Homepage**
+![Homepage Screenshot](screenshots/homepage.png)  
+
+### 🔹 **Emotion Analysis Output**
+![Analysis Screenshot](screenshots/analysis.png)  
+
+### 🔹 **Detailed Sentiment Breakdown**
+![Sentiment Breakdown Screenshot](screenshots/breakdown.png)  
+
+---
+
+## 🔧 Tech Stack
+### 🎨 Frontend (React.js)
+- **React.js** – Modern frontend library for dynamic UI.
+- **Tailwind CSS / Styled Components** – For a sleek and responsive design.
+- **Context API / Redux** – For efficient state management.
+
+### 🧠 Backend (Flask & NLP)
+- **Flask (Python)** – Lightweight and powerful backend framework.
+- **Natural Language Processing (NLP)** – Using **NLTK, TextBlob, or TensorFlow** for sentiment analysis.
+- **REST API** – Seamlessly processes text input and returns analyzed emotions.
+
+## 📌 How to Use This Project
+1. **Clone the Repository**:
+   ```sh
+   git clone https://github.com/sinless_rook/baymax.git
