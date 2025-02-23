@@ -1,14 +1,29 @@
 import React from "react";
 import ReactECharts from "echarts-for-react";
-// import { color } from "framer-motion";
 
-const PieChart = () => {
+const PieChart = (results) => {
+  const result = Object.entries(results["result"]).map(([emotion, value]) => ({
+    value,
+    name: emotion.charAt(0).toUpperCase() + emotion.slice(1), // Capitalize emotion
+  }));
+
+  // Define custom colors for each emotion
+  const emotionColors = {
+    Anger: "#FF4C4C",     // Red
+    Disgust: "#8BC34A",   // Green
+    Fear: "#9C27B0",      // Purple
+    Joy: "#FFEB3B",       // Yellow
+    Sadness: "#2196F3",   // Blue
+    Surprise: "#FF9800",  // Orange
+  };
+
   const option = {
     title: {
       text: "Mental Health Analysis",
       left: "center",
       textStyle: {
-        color: "white", 
+        color: "white",
+        padding: [5, 5, 5, 5],
       },
     },
     tooltip: {
@@ -18,21 +33,18 @@ const PieChart = () => {
       orient: "vertical",
       left: "left",
       textStyle: {
-        color: "white", 
+        color: "white",
+        padding: [5, 5, 5, 5],
       },
     },
+    color: result.map((item) => emotionColors[item.name] || "#CCCCCC"), // Assign colors
     series: [
       {
         name: "Status",
         type: "pie",
         radius: "50%",
-        data: [
-          { value: 40, name: "Happy" },
-          { value: 20, name: "Stressed" },
-          { value: 15, name: "Anxious" },
-          { value: 10, name: "Calm" },
-          { value: 15, name: "Sad" },
-        ],
+        center: ["50%", "60%"],
+        data: result,
         emphasis: {
           itemStyle: {
             shadowBlur: 5,

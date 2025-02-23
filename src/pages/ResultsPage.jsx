@@ -1,13 +1,16 @@
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
 import PieChart from "../component/PieChart"
+import { useLocation } from "react-router-dom";
 
 const ResultsPage = () => {
+  const location = useLocation();
+  const resultData = location.state?.result;
   // Mock results data
   const results = {
-    riskScore: "Low Risk",
-    emotionalStates: ["Anxiety", "Stress"],
-    keywords: ["worried", "overwhelmed", "pressure"],
+    riskScore: resultData["score"],
+    emotionalState: resultData["emotion"],
+    keywords: resultData["keywords"],
     resources: [
       { name: "National Anxiety Hotline", phone: "1-800-123-4567" },
       { name: "Local Support Group", website: "www.localsupport.com" },
@@ -22,17 +25,17 @@ const ResultsPage = () => {
         <div className="w-full md:w-1/3 p-4 bg-gray-800 rounded-lg shadow-md">
           <h1 className="text-2xl font-bold mb-2 text-black dark:text-white">Risk Score</h1>
           <p className="text-gray-400">Overall risk assessment</p>
-          <h1 className="text-5xl font-bold text-yellow-400 py-4">65%</h1>
+          <h1 className="text-5xl font-bold text-yellow-400 py-4">{results.riskScore}%</h1>
         </div>
 
         <div className="w-full md:w-1/3 p-4 bg-gray-800 rounded-lg shadow-md">
           <h1 className="text-2xl font-bold mb-2 text-black dark:text-white">Emotional State</h1>
           <p className="text-gray-400">Detected emotional condition</p>
-          <h1 className="text-3xl text-red-400 py-4">Anxious</h1>
+          <h1 className="text-3xl text-red-400 py-4">{results.emotionalState}</h1>
         </div>
 
         <div className="w-full md:w-1/3 p-4 bg-gray-800 text-white absolute right-0 rounded-lg shadow-md">
-          <PieChart />
+          <PieChart result={resultData.piegraph} />
         </div>
       </motion.div>
 
