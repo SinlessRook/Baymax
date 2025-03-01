@@ -21,6 +21,7 @@ const DataEntryPage = () => {
 
   const handleChatSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true);
     if (currentMessage.trim() !== "") {
       const userMessage = { sender: "You", text: currentMessage };
       try {
@@ -41,6 +42,7 @@ const DataEntryPage = () => {
       } catch (error) {
         alert("An error occurred while submitting the form.");
       } finally {
+        setIsLoading(false);
         setCurrentMessage("");
       }
     }
