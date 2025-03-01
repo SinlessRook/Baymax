@@ -25,7 +25,7 @@ const DataEntryPage = () => {
     if (currentMessage.trim() !== "") {
       const userMessage = { sender: "You", text: currentMessage };
       try {
-        const response = await fetch("http://127.0.0.1:5000/predict", {
+        const response = await fetch("https://baymax-backend.onrender.com/predict", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -61,7 +61,7 @@ const DataEntryPage = () => {
         .join('\n');
         const userName = textInputs[activeTab]
         .split('\n')[0].trim();  
-      const response = await fetch("http://127.0.0.1:5000/predict", {
+      const response = await fetch("https://baymax-backend.onrender.com/predict", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
