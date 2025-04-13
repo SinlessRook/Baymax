@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
-import { useState } from "react"
+import { useState,useEffect } from "react"
 import { motion } from "framer-motion"
 import NavigationBar from "./component/NavBar.jsx"
 import LandingPage from "./pages/LandingPage.jsx"
@@ -14,6 +14,10 @@ function App() {
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode)
   }
+
+  useEffect(() => {
+    fetch('https://baymax-backend.onrender.com/').then(res => res.json()).then(data => console.log(data));
+  },[7200])
 
   return (
     <Router>
