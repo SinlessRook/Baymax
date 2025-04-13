@@ -21,7 +21,7 @@ const ResultsPage = () => {
     <div className="container w-full px-16 py-16 dark:bg-grey-900 rounded-lg shadow-lg overflow-hidden">
       <h1 className="text-3xl font-bold mb-8 text-black dark:text-white text-left">Analysis Results</h1>
 
-      <motion.div className="flex flex-wrap gap-4">
+      <motion.div className="space-y-4 md:flex md:flex-wrap md:gap-4 md:space-y-0">
         <div className="w-full md:w-1/3 p-4 bg-gray-800 rounded-lg shadow-md">
           <h1 className="text-2xl font-bold mb-2 text-black dark:text-white">Risk Score</h1>
           <p className="text-gray-400">Overall risk assessment</p>
